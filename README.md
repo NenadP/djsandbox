@@ -1,4 +1,4 @@
 # django sandbox
 Django sandbox project
 
-aimed for practicing base django / python
+Basic django / python practice.
