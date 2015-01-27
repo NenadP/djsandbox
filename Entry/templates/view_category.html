@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block head_title %}Viewing category {{ category.title }}{% endblock %}
+{% block title %}{{ category.title }}{% endblock %}
+
+{% block content %}
+{% if posts %}
+<ul>
+  {% for entry in entries %}
+  <li><a href="{{ entry.get_absolute_url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no entries.</p>
+{% endif %}
+{% endblock %}

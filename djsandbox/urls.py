@@ -3,8 +3,15 @@ from django.contrib import admin
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'djsandbox.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+     url(r'^$', 'entry.views.index', name='home'),
+     url(
+         r'^entry/view/(?P<slug>[^\.]+).html',
+         'entry.views.view_entry',
+         name='view_entry'),
+     url(
+         r'^entry/category/(?P<slug>[^\.]+).html',
+         'entry.views.view_category',
+         name='view_entry_category'),
 
     url(r'^admin/', include(admin.site.urls)),
 )
